@@ -1,51 +1,72 @@
-# Astro Starter Kit: Minimal
+# Diego MD - Creative Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+A premium, cinematic creative portfolio website showcasing expertise in video editing, motion graphics, photography, and visual design.
+
+## Features
+
+- **Modern Design**: Dark mode first, high contrast, cinematic aesthetic
+- **Smooth Animations**: Framer Motion powered transitions and micro-interactions
+- **Fully Responsive**: Mobile-first design that works on all devices
+- **Performance Optimized**: Fast loading times and smooth scrolling
+- **SEO Friendly**: Proper meta tags and semantic HTML structure
+
+## Tech Stack
+
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Modern icon library
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
 ```
 
-<!-- ASTRO:REMOVE:START -->
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-<!-- ASTRO:REMOVE:END -->
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+2. Run the development server:
+```bash
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Build for Production
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm run build
+npm start
+```
 
-## 🧞 Commands
+## Project Structure
 
-All commands are run from the root of the project, from a terminal:
+```
+├── app/
+│   ├── layout.tsx      # Root layout with metadata
+│   ├── page.tsx        # Main page with all sections
+│   └── globals.css     # Global styles and Tailwind
+├── components/
+│   ├── Navigation.tsx  # Fixed navigation bar
+│   ├── Hero.tsx        # Hero section with CTA
+│   ├── About.tsx       # About me section
+│   ├── Tools.tsx       # Tools & software showcase
+│   ├── Skills.tsx      # Skills & expertise grid
+│   ├── Portfolio.tsx   # Portfolio gallery with modal
+│   ├── Workflow.tsx    # Creative workflow timeline
+│   ├── Services.tsx    # Services offered
+│   ├── Contact.tsx     # Contact form and info
+│   └── Footer.tsx      # Footer component
+└── public/             # Static assets
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Customization
 
-## 👀 Want to learn more?
+- Update portfolio items in `components/Portfolio.tsx`
+- Modify services in `components/Services.tsx`
+- Adjust colors in `tailwind.config.ts`
+- Update content in respective component files
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## License
+
+Private project - All rights reserved

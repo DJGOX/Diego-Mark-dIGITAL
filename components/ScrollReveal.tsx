@@ -11,7 +11,7 @@ interface ScrollRevealProps {
   delay?: number
   className?: string
   once?: boolean
-  margin?: string
+  margin?: string | { top?: number; right?: number; bottom?: number; left?: number }
 }
 
 const variants = {
@@ -48,10 +48,15 @@ export default function ScrollReveal({
   delay = 0,
   className = '',
   once = true,
-  margin = '-80px 0px -80px 0px',
+  margin = '-80px',
 }: ScrollRevealProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once, margin })
+  const marginValue = typeof margin === 'string' 
+    ? margin 
+    : margin 
+      ? `${margin.top || 0}px ${margin.right || 0}px ${margin.bottom || 0}px ${margin.left || 0}px`
+      : undefined
+  const isInView = useInView(ref, { once, margin: marginValue as any })
   const v = variants[variant]
 
   return (
